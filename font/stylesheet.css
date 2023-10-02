@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'FuturaExtended';
+    src: url('../font/FuturaExtended.eot');
+    src: url('../font/FuturaExtended.eot?#iefix') format('embedded-opentype'),
+        url('../font/FuturaExtended.woff2') format('woff2'),
+        url('../font/FuturaExtended.woff') format('woff'),
+        url('../font/FuturaExtended.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Brannboll Fet';
+    src: url('../font/BrannbollFet.eot');
+    src: url('../font/BrannbollFet.eot?#iefix') format('embedded-opentype'),
+        url('../font/BrannbollFet.woff2') format('woff2'),
+        url('../font/BrannbollFet.woff') format('woff'),
+        url('../font/BrannbollFet.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+

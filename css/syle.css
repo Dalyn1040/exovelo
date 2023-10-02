@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding:0;
+}
+/* insertion de police depuis font transforter*/
+@font-face {
+    font-family: 'Futura';
+    src: url('FuturaExtended.eot');
+    src: url('FuturaExtended.eot?#iefix') format('embedded-opentype'),
+        url('FuturaExtended.woff2') format('woff2'),
+        url('FuturaExtended.woff') format('woff'),
+        url('FuturaExtended.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bran';
+    src: url('BrannbollFet.eot');
+    src: url('BrannbollFet.eot?#iefix') format('embedded-opentype'),
+        url('BrannbollFet.woff2') format('woff2'),
+        url('BrannbollFet.woff') format('woff'),
+        url('BrannbollFet.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+
+header{
+    height: 100vh;
+    background: url("../img/fond.jpg") bottom right;
+    background-size: cover;
+}
+
+header nav{
+    position: fixed;
+    left: 5%;
+    top: 50%;
+    
+}
+
+header nav ul{
+   
+    list-style: none;/*enlève les puces de la liste*/
+}
+header nav ul li{
+    margin : 0 20px;/*ajoute des marges a gauche et a droite de la li*/
+    text-shadow: 2px 2px 4px black;
+}
+
+header nav ul li a{
+    font-family: "Futura";
+    text-decoration:none; /*enlève le soulignement*/
+    color: white; /*change la couleur du texte*/
+    font-weight:bold;/*change la graisse de la typo*/
+    text-transform: uppercase;/* passe le texte en majuscule*/
+    font size: 30px;
+    font weight: bold; 
+}
+header nav ul li:nth-of-type(1){
+    border-bottom: 3px ;
+}
+
+header nav ul li a:hover{
+    border-bottom:2px solid black; /*ajoute une bordure en bas au survol*/
+    opacity:0.5; /* va créer une opacité au survol*/
+    color:black; /* change la couleur des textes au survol*/
+}
+header div{
+    width: 250px ;
+    height: 250px;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header h1{
+    color: white;
+    text-align: center;
+    font-family: "Bran";
+}
+/****************** Fin header **************************/
+/*style pour les deux sections **/
+section{
+    width: 70%;
+
+}
+section h2{
+    text-align: center;/*permet de centrer le titre*/
+    text-transform: capitalize;/* va mettre une majuscule à tous les titres*/
+}
+section>div{/* sélectionne les div de permier niveau*/
+    display: flex;/*permet aux div enfants de se mettre
+    les unes à côté des autres*/
+    justify-content: center;/* permet de centrer les div enfant*/
+}
+section>div>div{/*sélectionne les div enfant des div de premier niveau*/
+    width: 150px;
+    height: 150px;
+    background: teal;
+    margin: 50px;/*éloigne les div les unes des aurtes*/
+    border-radius: 50%;
+}
+/****** style section 2****/
+section:nth-of-type(2){
+    background:teal;
+    transition : 1s
+}
+section:nth-of-type(2):hover{
+    background:mistyRose;
+}
+section:nth-of-type(2)>div>div{
+    background:white;
+}
+/************* footer ************************/
+footer{
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #333;
+}
+footer p{
+    color: white;
