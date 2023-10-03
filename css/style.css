@@ -40,9 +40,7 @@ header nav{
     left: 5%;
     top: 50%;
 }
-header div h1::first-letter{
-    text-transform: uppercase;
-}
+
 
 header nav ul{
     list-style: none;/*enlève les puces de la liste*/
@@ -83,6 +81,9 @@ header div h1{
     line-height: 46px;
 
 }
+header div h1::first-letter{
+    text-transform: uppercase;
+}
 /****************** Fin header **************************/
 /*style pour les deux sections **/
 
@@ -119,7 +120,6 @@ main section>div>div{/*sélectionne les div enfant des div de premier niveau*/
     position: absolute;
     top: 0;
     left: 0;
-    height: 150px;
     background:rgba(255, 255,255,0.8) teal;
     transform: scale(0.8);
     transition: 0.5s;
