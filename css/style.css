@@ -40,6 +40,9 @@ header nav{
     left: 5%;
     top: 50%;
 }
+header div h1::first-letter{
+    text-transform: uppercase;
+}
 
 header nav ul{
     list-style: none;/*enlève les puces de la liste*/
@@ -48,7 +51,10 @@ header nav ul{
 header nav ul li{
     /*margin : 0 20px;/*ajoute des marges a gauche et a droite de la li*/
     padding: 10px 0;
-    text-shadow: 2px 2px 4px black;
+    text-shadow: 2px 2px 6px black;
+}
+header nav ul li:nth-of-type(1){
+    border-bottom: 3px solid white;
 }
 
 header nav ul li a{
@@ -58,10 +64,6 @@ header nav ul li a{
     font-weight:bold;/*change la graisse de la typo*/
     text-transform: uppercase;/* passe le texte en majuscule*/
     font-size: 30px;
-    font-weight: bold; 
-}
-header nav ul li:nth-of-type(1){
-    border-bottom: 3px solid white;
 }
 
 header div{
@@ -77,36 +79,71 @@ header div h1{
     color: white;
     text-align: center;
     font-family: "Bran";
+    font-size: 40px;
+    line-height: 46px;
+
 }
 /****************** Fin header **************************/
 /*style pour les deux sections **/
-section{
+
+main section {
     width: 70%;
-
+    padding: 100px 0;
+    flex-wrap: wrap;
+    display: flex;
 }
 
-section>div{/* sélectionne les div de permier niveau*/
-    display: flex;/*permet aux div enfants de se mettre
-    les unes à côté des autres*/
-    justify-content: center;/* permet de centrer les div enfant*/
+main{
+    display: flex;
+    justify-content: flex flex-end;
+    background: #333;
 }
-
-section>div>div{/*sélectionne les div enfant des div de premier niveau*/
-    width: 150px;
-    height: 150px;
-    background: teal;
-    margin: 50px;/*éloigne les div les unes des aurtes*/
+main section div{
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
 }
+main section>div{
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    margin: 25px;
+}
+main section div img{ 
+    width: 100%;
+    opacity: 0,7;
+    transition: 0.5s;
+}
 
+main section>div>div{/*sélectionne les div enfant des div de premier niveau*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 150px;
+    background:rgba(255, 255,255,0.8) teal;
+    transform: scale(0.8);
+    transition: 0.5s;
+}
+main section>div:hover div{
+    transform: scale(0);
+}
+main section>div:hover img{
+    transform: scale(1.2);
+}
 
 /************* footer ************************/
 footer{
-    height: 400px;
+    height: 300px;
+    background: #999;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #333;
+    font-family: Bran;
+    color:white;
+    font: size 20px;
 }
+
 footer p{
-    color: white;}
+    color: white;
+}
+    
